@@ -1,18 +1,18 @@
+var string1 = prompt("ввудите строку для проверки");
 
-var arr = [0,2,5,7,3,2,5,5,6,10,1,1,1,1,];
-var arr2= new Array();
-var flag;
+var flag = true;
 
-for (var i = 0; i < arr.length; i += 1) {
-    document.write(arr[i] + ",    ");
+var j = string1.length;
+for (let i = 0; i < string1.length; i++) {
+    if (string1[i]!==string1[j-1-i]){
+        flag = false;
+    break;
+    }
 }
+console.log(string1);
 
-for (let i = 0; i < arr.length; i++) {   
-    if (!arr2.includes(arr[i]))
-        arr2.push(arr[i]);    
+if (flag){ 
+    alert("Да! Это полиндром");
 }
-
-document.write("<br \/>  = не повторяющиеся элементы =  <br \/>");
-for (var i = 0; i < arr2.length; i += 1) {
-    document.write(arr2[i] + ",    ");
-}
+else
+    alert("Нет! Это не полиндром");
