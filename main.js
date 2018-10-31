@@ -1,4 +1,5 @@
-var string1 = prompt("введите строку для проверки");
+var string = prompt("введите строку для проверки");
+var string1 = string.replace(/ /g, '');
 
 var isPolynom = true;
 
