@@ -3,11 +3,10 @@ var arr = [0,2,5,7,3,2,5,5,6];
 var arr2= new Array();
 var flag;
 
-console.log(arr);
+for (var i = 0; i < arr.length; i += 1) {
+    document.write(arr[i] + ",    ");
+}
 
-console.log("before " );//+ arr2);
-
-console.log(arr2);
 for (let i = 0; i < arr.length; i++) {
     flag  = true;
     for (let j = 0; j < arr2.length; j++) {
@@ -19,5 +18,7 @@ for (let i = 0; i < arr.length; i++) {
         arr2.push(arr[i]);
     
 }
-console.log("after " );
-console.log(arr2);
+document.write("<br \/>  = не повторяющиеся элементы =  <br \/>");
+for (var i = 0; i < arr2.length; i += 1) {
+    document.write(arr2[i] + ",    ");
+}
