@@ -1,18 +1,19 @@
-var string1 = prompt("ввудите строку для проверки");
+var string1 = prompt("введите строку для проверки");
 
-var flag = true;
+var isPolynom = true;
 
 var j = string1.length;
 for (let i = 0; i < j/2; i++) {
     if (string1[i]!==string1[j-1-i]){
-        flag = false;
+        isPolynom = false;
     break;
     }
 }
 console.log(string1);
 
-if (flag){ 
+if (isPolynom){ 
     alert("Да! Это полиндром");
 }
 else
     alert("Нет! Это не полиндром");
+
