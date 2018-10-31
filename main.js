@@ -5,18 +5,35 @@ var obj3={name:"Sasha", age:"25"};
 var obj4={name:"Ira", age:"10"};
 var arr=[{name:"Vasia", age: 41}, {name:"Kolia", age: 5}, {name:"Sasha", age: 1}, {name:"Ira", age: 10}];
 
-for (var i = 0; i < arr.length; i += 1) {
-    document.write(arr[i].age + ",    ");
+console.log(arr);
+
+function sort (arr) {
+    tmp = [];
+    for (var i = 0; i < arr.length; i += 1) {
+        tmp.push(arr[i]);
+    }
+    console.log('tmp', tmp);
+    tmp.sort(function (a,b) {
+        return (a.age<b.age)? -1 : 1;
+    });
+    console.log('tmp', tmp);
+    return tmp;
 }
 
-var arr2= arr.sort(function (a,b) {
+/*for (var j = 0; j < arr.length -1; j += 1) {
+ for (var i =0; i < arr.length - 1; i += 1) {
+
+    if (arr[i].age > arr[i + 1].age) {
+        var temp = Object.assign({}, arr[i]);
+        arr[i] = Object.assign({}, arr[i + 1]);
+        arr[i + 1] = Object.assign({}, temp);   
+    }
+}
+}*/
+/*
+arr.sort(function (a,b) {
     return (a.age<b.age)? -1 : 1;
 });
+*/
 
-
-console.log(arr2);
-
-document.write( " after sort:    ");
-for (var i = 0; i < arr2.length; i += 1) {
-    document.write(arr2[i].age + ",    ");
-}
+console.log(sort(arr));
